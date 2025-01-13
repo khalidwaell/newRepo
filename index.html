@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta  charset="UTF-8">
+<meta name="Viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Navbar</title>
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  rel="stylesheet"
+/>
+
+
+<!--Booststrap Css  -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NavBar-->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- Brand Logo-->
+             <a class="navbar-brand" href="#">
+                <img src="assets/brandLogo.png" alt="Brand Logo" width="108" height="23" class="d-inline-block align-text-top">
+             </a>
+               
+            
+             <div class="d-flex align-items-center">
+                <ul class="navbar-nav ms-auto">
+                    <li class="navbar-item">
+                        <a class="nav-link active" href="#">Microsoft 365</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="nav-link active" href="#">Office</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="nav-link active" href="#">Copilot</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="nav-link active" href="#">Windows</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="nav-link active" href="#">Support</a>
+                    </li>
+                </ul>
+             </div>
+             <!-- buttom for mobile view-->
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+             </button>
+             <!--navbar links-->
+             <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="navbar-item">
+                        <a class="nav-link active" href="#">All Microsoft</a>
+                    </li>
+                    <li class="navbar-item">
+                    <a class="nav-link active" href="#">Search</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="nav-link active" href="#">Sign In</a>
+                    </li>
+                </ul>
+             </div>
+
+            </nav>
+            <!-- Banner Section -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="d-flex align-items-center" style="height: 430px;">
+                    <!-- Left Half: Background Color with Content -->
+                    <div class="w-50 d-flex justify-content-center align-items-center" style="background-color: #f8f9fa;">
+                    </div>
+                    <!-- Right Half: Image -->
+                    <div class="w-50">
+                        <img src="assets/slide2.jpeg" class="d-block w-100 h-100" alt="Image 1" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="aligned-text">Maximise the everyday<br>with Microsoft 365</h1>
+                    <br>
+                    <p class="aligned-text">Get online protection, secure cloud storage and innovative<br>apps designed to fit your needs – all in one plan.</p>
+                    <br>
+                    <div class="d-flex align-items-center">
+                        <a href="#sasas" class="btn btn-primary me-3">For 1 person</a>
+                        <a href="#sad" class="nav-link active">For up to 6 people ></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="d-flex align-items-center" style="background-color: #fdf5ed; height: 430px;" >
+                    <!-- Left Half: Background Color with Content -->
+                    <div class="w-50 d-flex justify-content-center align-items-center" style="background-color: #e9ecef;">
+                    </div>
+                    <!-- Right Half: Image -->
+                    <div class="w-50">
+                        <img src="assets/slide1.jpeg" class="d-block w-100 h-100" alt="Image 2" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="aligned-text">Copilot is your<br>AI companion</h1>
+                    <br>
+                    <p class="aligned-text">Always by your side, ready to support you whenever and <br>wherever you need it.</p>
+                    <br>
+                    <div class="d-flex align-items-center">
+                        <a href="#new" class="btn btn-primary me-3">Download the Copilot app</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <!-- Carousel Controls -->
+       <div class="carousel-navigation d-flex justify-content-center align-items-center">
+    <button class="carousel-control-prev custom-arrow" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+
+
+   <!-- Play/Pause Button -->
+    <button id="playPauseButton" class="play-pause-btn" type="button">
+    <i class="bi bi-pause-fill"></i> <!-- Default icon is Pause -->
+    </button>
+    <button class="carousel-control-next custom-arrow" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+ <div class="container mt-5">
+     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- Card 1 -->
+        <div class="col">
+            <div class="card ">
+                <img src="assets/icon1.jpeg" class="card-img-top" alt="Card 1 Image">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Designed for life today—and </br>tomorrow</h5>
+                    <p class="card-text">The next-generation of games. Your goals. Friends and family. Windows 11 was made to bring you closer to everything you love.</p>
+                    <a href="#new1" class="btn btn-primary">See if your PC is ready</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col">
+            <div class="card ">
+                <img src="assets/icon2.jpeg" class="card-img-top" alt="Card 2 Image">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Microsoft Edge</h5>
+                    <p class="card-text">World-class performance with more privacy, more productivity, and more value while you browse.</p>
+                    <a href="#new2" class="btn btn-primary">Download Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col">
+            <div class="card ">
+                <img src="assets/icon3.jpeg" class="card-img-top" alt="Card 3 Image">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Microsoft OneDrive</h5>
+                    <p class="card-text">Save your files and photos to OneDrive and access them from any device, anywhere.</p>
+                    <a href="#new100" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col">
+            <div class="card">
+                <img src="assets/icon4.jpeg" class="card-img-top" alt="Card 4 Image">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Outlook for iOS and Android</h5>
+                    <p class="card-text">Connect. Organize. Get things done.</p>
+                    <a href="#new3" class="btn btn-primary">Download Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+    <!-- Card Image Banner Section -->
+
+<div class="image-banner-container">
+    <div class="image-banner-overlay">
+        <div class="image-banner-content">
+            <h2 class="image-banner-title">Organize your life</h2>
+            <p class="image-banner-description">Keep your ideas and notes organized in OneNote.</p>
+            <a href="#new4" class="btn btn-primary banner-btn">Learn more</a>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="section-title text-end">
+        <h3 class="business-title">Business</h3>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+       <!-- Card 1 -->
+
+       <div class="col">
+           <div class="cardn">
+               <img src="assets/banner01.jpeg" class="card-img-topn" alt="Card 1 Image">
+               <div class="card-bodyn text-center">
+                   <h5 class="card-titlen">Microsoft 365 </br>Copilot</h5>
+                   <p class="card-textn">Save time and focus on the things </br>that matter most with AI in </br>Microsoft 365 for business.</p>
+                   <a href="#new5" class="btn btn-primaryn">Learn more</a>
+               </div>
+           </div>
+       </div>
+       <!-- Card 2 -->
+       <div class="col">
+           <div class="cardn">
+               <img src="assets/banner02.jpeg" class="card-img-top" alt="Card 2 Image">
+               <div class="card-body text-center">
+                   <h5 class="card-title">Visual Studio 2022</h5>
+                   <p class="card-text">Get the most comprehensive IDE for</br>NET and C+ + developers on</br>Windows for building web, cloud,</br>desktop, mobile apps, services, and</br>games.</p>
+                   <a href="#new6" class="btn btn-primary">Download Visual Studio 2022</a>
+               </div>
+           </div>
+       </div>
+
+       <!-- Card 3 -->
+       <div class="col">
+           <div class="cardn">
+               <img src="assets/banner03.jpeg" class="card-img-top" alt="Card 3 Image">
+               <div class="card-body text-center">
+                   <h5 class="card-title">Welcome to your</br>Windows 365</br>Cloud PC</h5>
+                   <p class="card-text">Securely stream your Windows</br>experience from the Microsoft cloud</br>to any device.</p>
+                   <a href="#new8" class="btn btn-primary">Get it today</a>
+               </div>
+           </div>
+       </div>
+
+       <!-- Card 4 -->
+       <div class="col">
+           <div class="cardn">
+               <img src="assets/banner04.jpeg" class="card-img-top" alt="Card 4 Image">
+               <div class="card-body text-center">
+                   <h5 class="card-title">Empower people</br>and teams with</br>Microsoft Viva</h5>
+                   <p class="card-text">Bring together connection, purpose,</br>insight, and growth with the first</br>employee experience platform built</br>for the hybrid era</p>
+                   <a href="#new9" class="btn btn-primary">Learn more about Microsoft</br> Viva</a>
+               </div>
+           </div>
+       </div>
+   </div>
+   <div class="row mt-3">
+    <div class="col-12">
+        <div class="follow-microsoft d-flex align-items-center">
+            <p class="follow-text mb-0">Follow Microsoft</p>
+            <div class="social-icons ms-3">
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank" class="ms-3">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" class="ms-3">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<button id="backToTop" class="back-to-top">
+    <i class="fa-solid fa-arrow-up"></i> Back to Top
+</button>
+
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+<footer class="footer">
+    <div class="container-fluid py-5">
+        <div class="row">
+            <!-- Microsoft Store Section -->
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                <h5 class="footer-title">Microsoft Store</h5>
+                <ul class="footer-list">
+                    <li><a href="#">Account profile</a></li>
+                    <li><a href="#">Download Centre</a></li>
+                    <li><a href="#">Order tracking</a></li>
+                </ul>
+            </div>
+            <!-- Education Section -->
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                <h5 class="footer-title">Education</h5>
+                <ul class="footer-list">
+                    <li><a href="#">Microsoft in education</a></li>
+                    <li><a href="#">Devices for education</a></li>
+                    <li><a href="#">Microsoft Teams for Education</a></li>
+                    <li><a href="#">Microsoft 365 Education</a></li>
+                    <li><a href="#">Office Education</a></li>
+                    <li><a href="#">Educator training and development</a></li>
+                    <li><a href="#">Deals for students and parents</a></li>
+                    <li><a href="#">Azure for students</a></li>
+                </ul>
+            </div>
+            <!-- Business Section -->
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                <h5 class="footer-title">Business</h5>
+                <ul class="footer-list">
+                    <li><a href="#">Microsoft Cloud</a></li>
+                    <li><a href="#">Microsoft Security</a></li>
+                    <li><a href="#">Azure</a></li>
+                    <li><a href="#">Dynamics 365</a></li>
+                    <li><a href="#">Microsoft 365</a></li>
+                    <li><a href="#">Microsoft Advertising</a></li>
+                    <li><a href="#">Microsoft 365 Copilot</a></li>
+                    <li><a href="#">Microsoft Teams</a></li>
+                </ul>
+            </div>
+            
+            <!-- Developer & IT Section -->
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                <h5 class="footer-title">Developer & IT</h5>
+                <ul class="footer-list">
+                    <li><a href="#">Microsoft Developer</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Microsoft Learn</a></li>
+                    <li><a href="#">Microsoft Tech Community</a></li>
+                    <li><a href="#">Azure Marketplace</a></li>
+                    <li><a href="#">AppSource</a></li>
+                    <li><a href="#">Microsoft Power Platform</a></li>
+                    <li><a href="#">Visual Studio</a></li>
+                </ul>
+            </div>
+            <!-- Company Section -->
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                <h5 class="footer-title">Company</h5>
+                <ul class="footer-list">
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">About Microsoft</a></li>
+                    <li><a href="#">Company news</a></li>
+                    <li><a href="#">Privacy at Microsoft</a></li>
+                    <li><a href="#">Investors</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footer-bottom d-flex justify-content-between align-items-center mt-4">
+            <!-- Left Side Links -->
+            <div class="footer-bottom-left d-flex align-items-center">
+                <i class="bi bi-globe me-2"></i>
+                <span class="footer-text me-3">English (Egypt)</span>
+                <div class="privacy-choice d-flex align-items-center me-3">
+                    <i class="bi bi-check-circle me-1"></i>
+                    <span class="footer-text">Your Privacy Choices</span>
+                </div>
+                <span class="footer-text">Consumer Health Privacy</span>
+    
+            </div>
+            <!-- Right Side Icons and Text -->
+            <div class="footer-bottom-right d-flex align-items-center">
+              
+                <a href="#" class="footer-link me-3">Contact Microsoft</a>
+                <a href="#" class="footer-link me-3">Privacy</a>
+                <a href="#" class="footer-link me-3">Terms of use</a>
+                <a href="#" class="footer-link me-3">Trademarks</a>
+                <a href="#" class="footer-link me-3">About our ads</a>
+                <a href="#" class="footer-link me-3">© Microsoft 2025</a>
+
+            </div>
+        </div>
+    </div>
+    
+    
+</footer>
+</body>
+</html>

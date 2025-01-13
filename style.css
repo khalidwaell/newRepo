@@ -1,0 +1,516 @@
+* {
+    box-sizing: border-box; /* Ensure consistent sizing */
+}
+.navbar {
+    background-color: #ffffff; /* Light background */
+    font-family: "Helvetica Neue Light", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+
+}
+
+.nav-link {
+    padding-top: 5px; /* Adjust this value to move the text down */
+
+    color: #000000; /* Link color */
+}
+
+.nav-link:hover {
+    color: #000000; /* Hover color */
+    text-decoration: underline;
+}
+.aligned-text {
+    text-align: left; /* Aligns text to the left */
+    margin: 0; /* Removes extra spacing around the paragraph */
+    padding-left: 0; /* Ensures no indentation */
+    color: #000000;
+    font-family: "Helvetica ", Helvetica, Arial, sans-serif;
+}
+.carousel-inner{
+    background-color: #c7e0fc; /* Light background */
+
+}
+.carousel-caption {
+    text-align: left; /* Align text to the left */
+    left: 9%; /* Move text closer to the left edge */
+    top: 46%; /* Move text upward */
+    transform: translate(0, -50%); /* Adjust alignment relative to the container */
+    position: absolute; /* Ensure positioning works as intended */
+}
+
+.aligned-text {
+    margin-bottom: 1px; /* Adjust spacing between elements */
+}
+
+.d-flex a {
+    margin-top: 5px; /* Add a bit of spacing for the buttons */
+}
+
+.carousel-caption h1 {
+    font-size: 2.3125rem; /* Adjust heading size */
+    font-weight: 500;
+    
+    
+}
+
+.carousel-caption p {
+    font-size: 1.1rem; /* Adjust paragraph size */
+    margin-bottom: 10px; /* Add spacing below the paragraph */
+}
+
+.btn-primary {
+    border-radius: 0; /* Removes rounded corners for sharp edges */
+    background-color: rgb(40, 104, 178); /* Sets the background color to navy */
+    border: none; /* Removes any border */
+    color: white; /* Sets the text color to white */
+    padding: 10px 20px; /* Adds padding for better button size */
+    font-size: 16px; /* Adjust font size */
+    text-transform: uppercase; /* Optional: Makes text uppercase */
+    font-weight: 400;
+}
+
+.btn-primary:hover {
+    background-color: #014a93; /* Darker navy color on hover */
+    color: white; /* Keeps text white on hover */
+}
+/* Customize Arrows */
+.custom-arrow .carousel-control-prev-icon{
+    background-color: transparent; /* Remove black background */
+    background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23000000" viewBox="0 0 16 16"%3E%3Cpath fill-rule="evenodd" d="M11.354 1.646a.5.5 0 010 .708L6.707 7l4.647 4.646a.5.5 0 11-.708.708l-5-5a.5.5 0 010-.708l5-5a.5.5 0 01.708 0z"%3E%3C/path%3E%3C/svg%3E'); /* Use black icon */
+    background-repeat: no-repeat;
+    border-radius: 2px; /* Sharpen arrow edges */
+}
+.custom-arrow .carousel-control-next-icon {
+    background-color: transparent; /* Remove black background */
+    background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23000000" viewBox="0 0 16 16"%3E%3Cpath fill-rule="evenodd" d="M4.646 1.646a.5.5 0 000 .708L9.293 7l-4.647 4.646a.5.5 0 10.708.708l5-5a.5.5 0 000-.708l-5-5a.5.5 0 00-.708 0z"%3E%3C/path%3E%3C/svg%3E'); /* Right-facing arrow */
+    background-repeat: no-repeat;
+    border-radius: 2px; /* Sharpen arrow edges */
+    width: 100%;
+}
+
+
+.carousel-control-next {
+    position: absolute;
+    bottom: 1958px; /* Position arrows below the slides */
+    z-index: 1;
+    left: 47%;
+}
+.carousel-control-prev{
+    width: 100px;
+    position: absolute;
+    bottom: 1958px; /* Position arrows below the slides */
+    z-index: 1;
+    LEFT: 42.5%;
+}
+
+/* Customize Dots */
+.carousel-indicators [data-bs-target] {
+    width: 7px;
+    height: 7px;
+    border: 2px solid black; /* Outline in black */
+    background-color: transparent; /* Transparent background by default */
+    border-radius: 50%;
+    margin: 0 13px;
+    position: relative;
+    bottom: 2410px;
+}
+
+.carousel-indicators .active {
+    background-color: black; /* Fill dot with black when active */
+}
+.play-pause-btn {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    top: 27px;
+    left: -120px;
+}
+
+.play-pause-btn i {
+    font-size: 15px;
+    color: #000000;
+}
+/* Cards Styling */
+.card {
+    margin-top: 8rem;
+    border: none; /* Removes border for a clean look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    border-radius: 0; /* Sharp edges */
+    overflow: visible; /* Ensures no content spills out */
+    height: 500px; /* Set a fixed height for the card */
+    margin-bottom: 2rem;
+}
+.row.row-cols-1 {
+    margin-bottom: 2rem; /* Add spacing below the cards section */
+}
+.card-img-top {
+    object-fit: cover; /* Ensures images fit well */
+    height: 150px; /* Adjust height for uniformity */
+
+}
+.card-body {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; /* Align content to the top */
+    align-items: flex-start; /* Align content to the left */
+    padding: 15px; /* Add padding inside the card */
+
+}
+.card-body .btn-primary {
+    align-self: flex-start; /* Align button to the left */
+    margin-top: auto; /* Push the button to the bottom of the card */
+}
+
+
+
+.card-title {
+    text-align: left;
+    font-size: 1.8rem; /* Adjust font size */
+    font-weight: 501;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 15px; /* Reduce space below the title */
+}
+
+.card-text {
+    text-align: left;
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 10px; /* Add spacing below the description */
+}
+
+
+.btn-primary {
+    border-radius: 0; /* Sharp edges */
+    background-color: rgb(40, 104, 178); /* Navy blue */
+    border: none; /* No border */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Define padding for a good size */
+    text-transform: uppercase; /* Optional: Make text uppercase */
+    font-size: 0.9rem; /* Adjust font size */
+    font-weight: 400; /* Adjust text weight */
+    display: inline-block; /* Ensure it takes only the space of its content */
+    width: auto; /* Let the size depend on the text inside */
+    text-align: center; /* Center the text */
+    white-space: nowrap; /* Prevent the text from wrapping */
+}
+
+.btn-primary:hover {
+    background-color: #014a93; /* Darker navy blue on hover */
+    color: white;
+}
+.row.row-cols-1 {
+    margin-bottom: 4rem; /* Space below cards */
+}
+
+
+/* Banner Container */
+.image-banner-container {
+    aspect-ratio: 859 / 540; /* Maintain the image's original aspect ratio */
+    position: relative; /* Enable positioning for overlay */
+    background-image: url('assets/banner2.jpeg'); /* Replace with your image path */
+    background-size: cover; /* Ensure the image fills the container */
+    background-repeat: no-repeat; /* Prevent repetition */
+    background-position: center; /* Center the image */
+    width: 1300px; /* Set the desired width (e.g., 90% of the screen) */
+    height: 496px; /* Adjust height as needed */
+    margin: 0 auto; /* Center the banner horizontally */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+/* Overlay for Text */
+.image-banner-overlay {
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width overlay */
+    height: 100%; /* Full height overlay */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Vertically center content */
+    justify-content: flex-end; /* Align content to the right */
+    padding: 0 2rem; /* Add padding for right-side alignment */
+}
+
+/* Content Inside Banner */
+.image-banner-content {
+    max-width: 500px; /* Limit text width */
+    text-align: left; /* Align text to the left  */
+    color: white; /* White text for readability */
+}
+
+/* Banner Title */
+.image-banner-title {
+    font-size: 2.3rem; /* Adjust title size */
+    font-weight: 500; /* Make the title bold */
+    margin-bottom: 20px; /* Add space below the title */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Banner Description */
+.image-banner-description {
+    font-size: 1.2rem; /* Adjust description size */
+    margin-bottom: 20px; /* Add space below description */
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* Button Styling */
+.banner-btn {
+    border-radius: 0; /* Sharp edges */
+    background-color: rgb(40, 104, 178); /* Navy blue */
+    border: none; /* Remove border */ 
+    color: white; /* White text */
+    padding: 10px 20px; /* Add padding to the button */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: 500; /* Button text weight */
+}
+
+.banner-btn:hover {
+    background-color: #014a93; /* Darker navy blue on hover */
+    color: white; /* Keep text white */
+}
+    /* Section Title Styling */
+    .section-title {
+        margin-bottom: -5px; /* Keep the title close to the cards */
+        text-align: left; /* Align the title to the right */
+    }
+
+    .business-title {
+        font-size: 2rem; /* Adjust font size */
+        font-weight: 600; /* Bold font */
+        color: #000000; /* Black color */
+        margin-right: 1rem; /* Add space from the edge */
+        text-align: left;
+    }
+    .cardn {
+        border: none; /* Removes border for a clean look */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+        border-radius: 0; /* Sharp edges */
+        overflow: visible; /* Ensures no content spills out */
+        height: 500px; /* Set a fixed height for the card */
+        margin-bottom: 2rem;
+        display: flex; /* Enable flexbox for alignment */
+        flex-direction: column; /* Stack card contents vertically */
+        justify-content: space-between; /* Distribute space to align the button at the bottom */
+    }
+    
+    .card-img-topn {
+        object-fit: cover; /* Ensures images fit well */
+        height: 150px; /* Adjust height for uniformity */
+
+    }
+    .card-bodyn {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        justify-content: space-between; /* Ensure spacing between content and button */
+        align-items: flex-start; /* Align content to the left */
+        padding: 15px; /* Add padding inside the card */
+        height: 100%; /* Make the body take full card height */
+    }
+    .card-bodyn .btn-primaryn {
+        align-self: flex-start; /* Align button to the left */
+        margin-top: auto; /* Push the button to the bottom of the card */
+    }
+
+
+
+    .card-titlen {
+        text-align: left;
+        font-size: 1.8rem; /* Adjust font size */
+        font-weight: 501;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 15px; /* Reduce space below the title */
+    }
+
+    .card-textn {
+        text-align: left;
+        font-size: 1rem;
+        color: #000000;
+        margin-bottom: 10px; /* Add spacing below the description */
+    }
+
+
+    .btn-primaryn {
+        border-radius: 0; /* Sharp edges */
+        background-color: rgb(40, 104, 178); /* Navy blue */
+        border: none; /* No border */
+        color: white; /* Text color */
+        padding: 10px 20px; /* Define padding for a good size */
+        text-transform: uppercase; /* Optional: Make text uppercase */
+        font-size: 0.9rem; /* Adjust font size */
+        font-weight: 400; /* Adjust text weight */
+        display: inline-block; /* Ensure it takes only the space of its content */
+        width: auto; /* Let the size depend on the text inside */
+        text-align: left; /* Center the text */
+        white-space: nowrap; /* Prevent the text from wrapping */
+    }
+
+    .btn-primaryn:hover {
+        background-color: #014a93; /* Darker navy blue on hover */
+        color: white;
+    }
+    .row.row-cols-1 {
+        margin-bottom: 0rem; /* Space below cards */
+    }
+.newh{
+        text-align: left; /* Align the title to the right */
+    }
+    /* Follow Microsoft Section */
+.follow-microsoft {
+    text-align: left; /* Align content to the left */
+    margin-top: 5px; /* Add some spacing above the section */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 100px;
+}
+
+.follow-text {
+    font-size: 1rem; /* Adjust font size */
+    font-weight: 500; /* Semi-bold */
+    color: #000000; /* Black color for text */
+}
+
+.social-icons a {
+    color: #000000; /* Default icon color */
+    font-size: 1.5rem; /* Adjust icon size */
+    margin-left: 10px; /* Space between icons */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.social-icons a:hover {
+    color: rgb(40, 104, 178); /* Navy blue on hover */
+}
+/* Back to Top Button Styling */
+.back-to-top {
+    position: fixed; /* Fix the button to the screen */
+    bottom: 10px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    background-color: rgb(204, 204, 204); /* Grey background */
+    color: rgb(0, 0, 0); /* Black text */
+    font-family: Arial, Helvetica, sans-serif;
+    border: none; /* Remove border */
+    border-radius: 0; /* Sharp edges */
+    width: 143px; /* Button width */
+    height: 40px; /* Button height */
+    font-size: 14px; /* Text size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    z-index: 1000; /* Ensure the button stays above other elements */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Prevent interaction when hidden */
+    transition: all 0.3s ease; /* Smooth transition effects */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Horizontally center text */
+    align-items: center; /* Vertically center text */
+    text-align: center; /* Ensure text is fully centered */
+    gap: 8px; /* Space between icon and text */
+}
+
+.back-to-top:hover {
+    background-color: white; /* Turns white on hover */
+    color: rgb(0, 0, 0); /* Text turns black */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* Show the button when scrolled */
+.back-to-top.show {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Make it interactable */
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #f3f3f3; /* Light grey background */
+    color: #333333; /* Dark grey text */
+    font-family: Arial, sans-serif;
+    border-top: 1px solid #e5e5e5; /* Subtle border */
+}
+
+.footer-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #7f7f7f; /* Title color */
+    margin-left: 100px;
+    text-align: left;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 100px;
+    text-align: left;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.footer-list li {
+    margin-bottom: 0.5rem; /* Space between items */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.footer-list li a {
+    text-decoration: none; /* Remove underline */
+    color: #666666; /* Subtitle color */
+    font-size: 0.9rem;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.footer-list li a:hover {
+    color: #000000; /* Black on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Footer Styles */
+/* Footer Links */
+.footer-link {
+    text-decoration: none;
+    color: #666666;
+    margin-right: 15px;
+    font-size: 14px;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    color: #000000;
+}
+
+/* Footer Text */
+.footer-text {
+    font-size: 14px;
+    color: #666666;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Footer Bottom Alignment */
+.footer-bottom {
+    margin-left: 100px;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Globe and Privacy Icons */
+.footer-bottom-right i {
+    font-size: 16px;
+    color: #333333;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.privacy-choice i {
+    font-size: 16px;
+    color: #0078D4; /* Blue check icon color */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.footer-bottom-right .footer-text {
+    margin-right: 15px;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
